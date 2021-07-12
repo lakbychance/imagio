@@ -22,6 +22,9 @@ export default function Home({ data }: { data: UnsplashImage[] & { error: number
 
   const handleFetch = useCallback(async () => {
     const data = await fetchImages(++pageRef.current);
+    if (data.error) {
+      return;
+    }
     setImages(images => [...images, ...data]);
   }, [])
 
