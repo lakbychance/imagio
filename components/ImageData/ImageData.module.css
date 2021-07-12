@@ -1,0 +1,33 @@
+
+.heading{
+   display: flex;
+   justify-content: center;
+}
+.imageDetails{
+    list-style-type: none;
+}
+.imageDetails>li{
+    padding:10px;
+}
+
+.datetime{
+    display: flex;
+    height:60px;
+    align-items: center;
+}
+.icon{
+    padding-right: 5px;
+}
+.info>p{
+    margin: 0;
+}
+.info>p>span:not(:last-child){
+padding-right: 5px;
+}
+.info{
+    padding: 0;
+}
+.info>p:nth-child(2){
+    font-size: 14px;
+    color:#676767
+}
