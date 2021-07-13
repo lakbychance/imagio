@@ -1,17 +1,14 @@
-import { GetStaticProps } from 'next';
 import Head from 'next/head'
 import Image from 'next/image'
-import React, { useCallback, useEffect, useRef } from 'react';
-import { useState } from 'react'
-import styles from '../styles/Home.module.css'
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import Grid from '../components/Grid/Grid';
 import Link from 'next/link'
-import Loader from '../components/Loader/Loader';
 import Error from 'next/error'
-import { fetchImages } from '../utils';
-import { UnsplashImage } from '../interfaces/index'
-import clsx from 'clsx';
+import { GetStaticProps } from 'next';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { Grid,Loader } from 'components'
+import { useIntersectionObserver } from 'hooks';
+import { fetchImages } from 'utils';
+import { UnsplashImage } from 'interfaces'
+import styles from 'styles/Home.module.css'
 
 
 export default function Home({ data }: { data: UnsplashImage[] & { error: number } }) {

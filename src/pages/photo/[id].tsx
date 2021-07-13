@@ -1,13 +1,13 @@
-import { GetStaticProps, GetStaticPropsContext } from "next"
-import { fetchSingleImage, fetchImages } from "../../utils"
-import styles from './Photo.module.css'
 import Image from 'next/image'
-import clsx from 'clsx'
-import React, { useState } from "react"
-import ImageData from "../../components/ImageData/ImageData"
 import { useRouter } from 'next/router';
 import Error from 'next/error'
-import { UnsplashImage } from "../../interfaces"
+import { GetStaticProps, GetStaticPropsContext } from "next"
+import React, { useState } from "react"
+import clsx from 'clsx'
+import { ImageData } from "components"
+import { fetchSingleImage, fetchImages } from "utils"
+import { UnsplashImage } from "interfaces"
+import styles from './Photo.module.css'
 
 
 const Photo = ({ data }: { data: UnsplashImage }) => {
