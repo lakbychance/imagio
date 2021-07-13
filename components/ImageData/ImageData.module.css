@@ -4,7 +4,7 @@
    justify-content: center;
 }
 .imageDetails{
-    list-style-type: none;
+    padding:20px;
 }
 .imageDetails>li{
     padding:10px;

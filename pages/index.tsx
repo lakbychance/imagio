@@ -11,6 +11,7 @@ import Loader from '../components/Loader/Loader';
 import Error from 'next/error'
 import { fetchImages } from '../utils';
 import { UnsplashImage } from '../interfaces/index'
+import clsx from 'clsx';
 
 
 export default function Home({ data }: { data: UnsplashImage[] & { error: number } }) {
@@ -45,7 +46,7 @@ export default function Home({ data }: { data: UnsplashImage[] & { error: number
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className={styles.header}>
-        <h1>Imagio</h1>
+        <h1 className='text-4xl font-bold text-blue-500'>Imagio</h1>
       </header>
       <main id='main' className={styles.main}>
         <Grid>
@@ -56,7 +57,7 @@ export default function Home({ data }: { data: UnsplashImage[] & { error: number
                 alt={image.alt_description}
                 width={640}
                 height={640}
-                className={styles.image}
+                className='cursor-pointer hover:opacity-80 rounded-xl'
                 objectFit='cover'
                 layout='responsive'
                 placeholder='blur'
