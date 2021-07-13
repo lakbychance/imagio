@@ -9,6 +9,10 @@
 .imageDetails>li{
     padding:10px;
 }
+.container{
+    height: calc(100vh - 50px);
+    overflow:auto;
+}
 
 .datetime{
     display: flex;
