@@ -27,7 +27,7 @@ const ImageData = ({ data }: { data: UnsplashImage }) => {
 const ExifData = ({ exif }: { exif: Exif }) => {
     return (
         <section className={clsx(styles.datetime, 'shadow pl-1 rounded-lg')}>
-            <div className={styles.icon}>
+            <div className={clsx(styles.icon,'flex')}>
                 <Image alt='Aperture icon' src="https://img.icons8.com/officel/80/000000/aperture.png" width={30} height={30} />
             </div>
             <ul className={styles.info}>
@@ -60,7 +60,7 @@ const DateTime = ({ created_at }: { created_at: string }) => {
     const minutes = datetime.getUTCMinutes();
     const timezone = parseMinutes(datetime.getTimezoneOffset());
     return (<section className={clsx(styles.datetime, 'shadow pl-1 rounded-lg')}>
-        <div className={styles.icon}>
+        <div className={clsx(styles.icon,'flex')}>
             <Image alt='Calendar icon' src="https://img.icons8.com/color/48/000000/calendar--v1.png" width={30} height={30} />
         </div>
         <div className={styles.info}>
