@@ -65,5 +65,9 @@ filter: invert(1);
         z-index: 1;
         position: absolute;
     }
+    .showSidebar{
+        width:100%;
+        min-width:unset
+    }
     
 }
